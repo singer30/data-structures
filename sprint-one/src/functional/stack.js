@@ -27,9 +27,3 @@ var Stack = function() {
   return someInstance;
 };
 
-// delete storage[someInstance.len]; 
- //someInstance.len--;
-//if(someInstance.len < 0){
-    //   someInstance.len = 0;
-    // }
-// return storage[someInstance.len-1];
