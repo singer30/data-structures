@@ -15,7 +15,7 @@ var Stack = function() {
     var lastVal = storage[someInstance.len-1];
     delete storage[someInstance.len]; 
     someInstance.len--;
-    if(someInstance.len < 0){
+    if(someInstance.len <= 0){
       someInstance.len = 0;
     }
      return lastVal;
