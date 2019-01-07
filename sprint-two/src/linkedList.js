@@ -47,8 +47,7 @@ var LinkedList = function() {
     // if any nodes value matches target then return true
     // if not then return false
     var result = false;
-    debugger;
-    var che = function(node){
+    var checkTarget = function(node){
       var currentNode = node;
       if(currentNode.value === target){
         result = true;
@@ -56,10 +55,10 @@ var LinkedList = function() {
         return;
       }
       else {
-        che(node.next);
+        checkTarget(node.next);
       }
     }
-    che(list.head);
+    checkTarget(list.head);
     return result;
     
   };
