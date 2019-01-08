@@ -7,23 +7,23 @@ var Set = function() {
 var setPrototype = {};
 
 setPrototype.add = function(item) {
- if(!this._storage.includes(item)){
- this._storage.push(item);
- }
- //return false;
+  if (!this._storage.includes(item)) {
+    this._storage.push(item);
+  }
+ 
 };
 
 setPrototype.contains = function(item) {
-if( this._storage.includes(item)){
-	return true;
-}
-   return false;
+  if (this._storage.includes(item)) {
+    return true;
+  }
+  return false;
 };
 
 setPrototype.remove = function(item) {
-	if( this._storage.includes(item)){
-	this._storage.pop(item);
-}
+  if (this._storage.includes(item)) {
+    this._storage.pop(item);
+  }
 };
 
 /*
