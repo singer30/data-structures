@@ -27,19 +27,18 @@ var LinkedList = function() {
     if (list.head.next === null) {
       list.head.next = newNode;
       list.tail = newNode;
-    } 
-    else {
+    } else {
     // change our tails reference itself to new last value
-    var oldtail = list.tail;
-    oldtail.next = newNode;
-    list.tail = newNode;
-   } 
+      var oldtail = list.tail;
+      oldtail.next = newNode;
+      list.tail = newNode;
+    } 
   };
 
   list.removeHead = function() {
     var oldhead = list.head;
-   list.head = list.head.next;
-   return oldhead.value;
+    list.head = list.head.next;
+    return oldhead.value;
   };
 
   list.contains = function(target) {
@@ -47,17 +46,16 @@ var LinkedList = function() {
     // if any nodes value matches target then return true
     // if not then return false
     var result = false;
-    var checkTarget = function(node){
+    var checkTarget = function(node) {
       var currentNode = node;
-      if(currentNode.value === target){
+      if (currentNode.value === target) {
         result = true;
-      } else if(currentNode.next === null){
+      } else if (currentNode.next === null) { 
         return;
-      }
-      else {
+      } else {
         checkTarget(node.next);
       }
-    }
+    };
     checkTarget(list.head);
     return result;
     
