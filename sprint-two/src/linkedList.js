@@ -17,18 +17,18 @@ var LinkedList = function() {
   list.tail = null;
 
   list.addToTail = function(value) {
-   // create a new node 
-   var newNode = Node(value);
-   // adjust our tails node next refernce to our new node
-   if(list.head === null){
-    list.head = newNode;
-    list.tail = newNode;
-   } 
-   if(list.head.next === null){
-    list.head.next = newNode;
-    list.tail = newNode;
-   } 
-   else {
+  // create a new node 
+    var newNode = Node(value);
+    // adjust our tails node next refernce to our new node
+    if (list.head === null) {
+      list.head = newNode;
+      list.tail = newNode;
+    } 
+    if (list.head.next === null) {
+      list.head.next = newNode;
+      list.tail = newNode;
+    } 
+    else {
     // change our tails reference itself to new last value
     var oldtail = list.tail;
     oldtail.next = newNode;
